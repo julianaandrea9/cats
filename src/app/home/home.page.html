@@ -6,7 +6,6 @@
   </ion-toolbar>
 </ion-header>
 <div *ngIf="isLoading">
-  <!-- Aquí coloca tu código HTML para mostrar el spinner (por ejemplo, una animación de carga) -->
   <div class="spinner"></div>
 </div>
 
@@ -15,8 +14,6 @@
     <ion-card *ngFor="let item of listCats">
       <ion-card-header>
         <ion-card-title>{{item.breedName}}</ion-card-title>
-        <!-- <img [src]="item.imageUrl"> -->
-
         <ion-card-subtitle></ion-card-subtitle>
       </ion-card-header>
 

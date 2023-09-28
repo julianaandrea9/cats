@@ -10,7 +10,6 @@ import { Cat } from '../shared/models/cat.model';
 export class HomePage implements OnInit {
   listCats: Cat[] = [];
   isLoading: boolean = false;
-  @ViewChild('scrollToTopButton') scrollToTopButton: ElementRef | undefined;
 
   constructor(private catService: CatsService) {}
 
@@ -19,7 +18,7 @@ export class HomePage implements OnInit {
   }
 
   public getAllCats() {
-    this.isLoading = true; // Muestra el spinner
+    this.isLoading = true;
 
     this.catService.getCats().subscribe(
       (data: any) => {
